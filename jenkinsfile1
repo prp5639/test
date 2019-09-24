@@ -1,17 +1,19 @@
 pipeline {
-	agent any
 	stages {
 		stage ('build') {
+		agent none
 			steps {
 				echo 'compile stage'
 				}
 			}
 		stage ('deploy') {
+		agent none
 			steps {
 				echo 'deploy stage'
 				}
 			}
 		stage ('test') {
+		agent Slave
 			steps {
 				echo 'testing stage'
 				}
