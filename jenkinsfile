@@ -1,0 +1,17 @@
+pipeline{
+	agent:any
+		stages {
+			stage('compile') {
+			steps {
+				echo 'Welcome to Pipeline'
+			}
+			}
+		}
+	stages {
+		stage('display') {
+			steps {
+				echo 'pipeline program'
+				}
+	}
+}	
+}
