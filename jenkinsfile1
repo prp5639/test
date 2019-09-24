@@ -1,24 +1,25 @@
 pipeline {
-agent label:Slave
+agent none
 	stages {
 		stage ('build') {
-		agent Slave
+		agent any
 			steps {
 				echo 'compile stage'
 				}
 			}
 		stage ('deploy') {
-		agent Slave
+		agent {
 			steps {
 				echo 'deploy stage'
 				}
 			}
+			}
 		stage ('test') {
-		agent Slave
+		agent {
 			steps {
 				echo 'testing stage'
 				}
 			}
 		}
 	}
-
+}
